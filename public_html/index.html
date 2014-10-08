@@ -39,6 +39,7 @@ font-size:36px;
 }
 </style>
 <body>
+<center>
 <h1>~~~HELLO I AM TREY~~~~</h1>
 
 <p>Welcome to my home on the world wide web!</p>
@@ -46,22 +47,8 @@ font-size:36px;
 <p>An awesome jpeg (it loads super fast!)</p>
 
 <img class="border" src="http://www.pooyak.com/p/progjpeg/jpegload.cgi?o=1" width="377" height="500" title="LOLWUT" alt="Super Cool Statue">
-<script>
-$.getJSON('api/users.json', function( json ) {
-	$.each(json, function(i, user) {
-	   $('select').append($('<option>').text(user).attr('value', user));
-	});
-});
 
-/*function sendUnicorn(user) {
-	$.ajax({
-		url:'http://jsonp-db-redux.appspot.com/
-	});
-}*/
-</script>
-
-<select></select>
-<ul></ul>
+<iframe src="/~trey/send_message.html" height="250"></iframe>
 
 <br>
 <img src='images/Bill_Gates.gif'/>
@@ -104,5 +91,7 @@ Want to join the ring? Click here for
 
 <!-- End Webring Fragment-->
 
-<div style='height:100px; text-align:center'><img src='images/counter.gif'/><img src='images/ns_logo.gif'/><img src='images/ie_logo.gif'/><img src='images/noframes.gif'/><img src='images/notepad.gif'/></div></body>
+<div style='height:100px; text-align:center'><img src='images/counter.gif'/><img src='images/ns_logo.gif'/><img src='images/ie_logo.gif'/><img src='images/noframes.gif'/><img src='images/notepad.gif'/></div>
+</center>
+</body>
 </html>

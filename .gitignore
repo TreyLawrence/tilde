@@ -3,3 +3,7 @@
 sent
 .viminfo
 *.swp
+.addressbook
+.pinerc
+mail
+*.json

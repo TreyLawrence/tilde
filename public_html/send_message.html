@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>My tilde.club page</title>
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+<body style="background-color:#C0C0C0">
+<script>
+$.getJSON('api/users.json', function( json ) {
+	$.each(json, function(i, user) {
+	   $('select').append($('<option>').text(user).attr('value', user));
+	});
+});
+
+function sendMessage() {
+	var message = {
+		"to": $('select').val(),
+		"time": (new Date()).getUTCHours(),
+		"from": $('input').val(),
+		"text": $('textarea').val()
+	};
+	$.getJSON(
+		'http://send-unicorns.appspot.com/put/buckets/messages/' +
+		JSON.stringify(message)+'?callback=?', function(data){
+   			alert("Message sent!");
+			$('textarea').val('');
+			$('input').val('');
+		});
+}
+</script>
+
+<h1>Send a message to a tilde!</h1>
+<select></select>
+<button onclick="sendMessage()">Send Message</button>
+<br>
+<input placeholder="who are you?">
+<br>
+<textarea placeholder="message..." rows ="5"></textarea>
+</body>
+</html>
